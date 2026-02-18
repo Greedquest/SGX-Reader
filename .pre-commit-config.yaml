@@ -24,7 +24,7 @@ repos:
     rev: v3.19.1
     hooks:
       - id: pyupgrade
-        args: [--py310-plus]
+        args: [--py312-plus]
 
   # Ruff - An extremely fast Python linter and formatter
   - repo: https://github.com/astral-sh/ruff-pre-commit
@@ -37,6 +37,7 @@ repos:
       - id: ruff-format
 
   # Black - The uncompromising Python code formatter
+  # Note: ruff-format is black-compatible, but keeping both as requested
   - repo: https://github.com/psf/black
     rev: 24.10.0
     hooks:
