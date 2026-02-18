@@ -1,12 +1,13 @@
-import argparse
+from __future__ import annotations
 
+import argparse
 import tempfile
-from pathlib import Path
 from collections.abc import Sequence
+from pathlib import Path
 from zipfile import ZipFile
-from tqdm import tqdm
 
 from converter.signavio_to_bpmn import convert_file
+from tqdm import tqdm
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -28,14 +29,15 @@ def main(argv: Sequence[str] | None = None) -> int:
         # Find JSON model files
         json_root = td_path
         json_files: set[Path] = {*json_root.rglob("model_*.json")} - {
-            *json_root.rglob("*model_meta*.json")
+            *json_root.rglob("*model_meta*.json"),
         }
 
         # Call converter function directly
         for i, json_file in tqdm(enumerate(json_files)):
             output_file = out_dir / f"{json_file.stem}_{i}.bpmn"
             assert convert_file(
-                json_file, output_file
+                json_file,
+                output_file,
             ), f"Conversion failed for {json_file}"
 
     print(f"Done, BPMN written to: {out_dir.resolve()}")
