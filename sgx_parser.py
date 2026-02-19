@@ -13,7 +13,9 @@ from tqdm import tqdm
 
 
 METADATA_SCHEMA = cfgv.Map(
-    "ModelMetadata", "name", cfgv.Required("name", cfgv.check_string)
+    "ModelMetadata",
+    "name",
+    cfgv.Required("name", cfgv.check_string),
 )
 
 
