@@ -1,8 +1,0 @@
-Metadata-Version: 2.4
-Name: sgx-reader
-Version: 0.1.0
-Summary: Convert Signavio SGX exports to BPMN XML
-Requires-Python: >=3.9
-Requires-Dist: cfgv~=3.3
-Requires-Dist: sanitize-filename~=1.2
-Requires-Dist: tqdm~=4.64

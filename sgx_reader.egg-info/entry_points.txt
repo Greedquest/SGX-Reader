@@ -1,2 +1,0 @@
-[console_scripts]
-sgx-reader = sgx_parser:main

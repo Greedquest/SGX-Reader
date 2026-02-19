@@ -3,3 +3,4 @@
 /bpmn_output.zip
 /Signavio Export
 /__pycache__
+*.egg-info/
