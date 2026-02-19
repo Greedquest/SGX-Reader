@@ -40,7 +40,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         }
 
         # Call converter function directly
-        for i, json_file in tqdm(enumerate(json_files), total=len(json_files)):
+        for json_file in tqdm(json_files, total=len(json_files)):
             metadata_path = json_file.parent / "model_meta.json"
             assert metadata_path.exists(), f"{json_file} has no associated metadata"
             metadata: dict[str, str] = cfgv.load_from_filename(
