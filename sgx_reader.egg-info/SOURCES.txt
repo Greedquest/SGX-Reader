@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+sgx_parser.py
+sgx_reader.egg-info/PKG-INFO
+sgx_reader.egg-info/SOURCES.txt
+sgx_reader.egg-info/dependency_links.txt
+sgx_reader.egg-info/entry_points.txt
+sgx_reader.egg-info/requires.txt
+sgx_reader.egg-info/top_level.txt
