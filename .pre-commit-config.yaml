@@ -66,12 +66,12 @@ repos:
         args: [--ignore-missing-imports, --show-error-codes, --follow-imports=skip]
         exclude: ^converter/
 
-  # Validate pyproject.toml and test that pip install resolves correctly
+  # Validate pyproject.toml can be built (no network - deps not resolved)
   - repo: local
     hooks:
       - id: pip-install-dry-run
         name: pip install dry run
-        entry: pip install --no-build-isolation --dry-run -e .
+        entry: pip install --no-build-isolation --no-deps --dry-run -e .
         language: system
         pass_filenames: false
         files: ^pyproject\.toml$
