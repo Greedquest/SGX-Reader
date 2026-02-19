@@ -4,3 +4,5 @@
 /Signavio Export
 /__pycache__
 *.egg-info/
+*.bpmn
+converter
