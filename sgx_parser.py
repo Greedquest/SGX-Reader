@@ -9,6 +9,7 @@ from zipfile import ZipFile
 
 import cfgv
 from converter.signavio_to_bpmn import convert_file
+from sanitize_filename import sanitize
 from tqdm import tqdm
 
 
@@ -51,7 +52,8 @@ def main(argv: Sequence[str] | None = None) -> int:
                 json.loads,
             )
 
-            output_file = out_dir / f"{metadata['name']}.bpmn"
+            sanitized_name = sanitize(metadata["name"])
+            output_file = out_dir / f"{sanitized_name}.bpmn"
             assert convert_file(
                 json_file,
                 output_file,
