@@ -12,7 +12,7 @@ from converter.signavio_to_bpmn import convert_file
 from tqdm import tqdm
 
 
-METADATA_SCHEMA = cfgv.Map("Schema", "name", cfgv.Required("name", cfgv.check_string))
+METADATA_SCHEMA = cfgv.Map("ModelMetadata", "name", cfgv.Required("name", cfgv.check_string))
 
 
 def main(argv: Sequence[str] | None = None) -> int:
