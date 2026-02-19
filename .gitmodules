@@ -1,3 +1,4 @@
 [submodule "converter"]
 	path = converter
 	url = https://github.com/Greedquest/SignavioToBPMN.git
+	ignore = all
