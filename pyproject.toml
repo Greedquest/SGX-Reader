@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sgx-reader"
+version = "0.1.0"
+description = "Convert Signavio SGX exports to BPMN XML"
+requires-python = ">=3.9"
+dependencies = [
+    "cfgv~=3.3",
+    "sanitize-filename~=1.2",
+    "tqdm~=4.64",
+]
+
+[project.scripts]
+sgx-reader = "sgx_parser:main"
+
+[tool.setuptools]
+py-modules = ["sgx_parser"]
+packages = ["converter"]
