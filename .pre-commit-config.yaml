@@ -65,3 +65,13 @@ repos:
       - id: mypy
         args: [--ignore-missing-imports, --show-error-codes, --follow-imports=skip]
         exclude: ^converter/
+
+  # Validate pyproject.toml and test that pip install resolves correctly
+  - repo: local
+    hooks:
+      - id: pip-install-dry-run
+        name: pip install dry run
+        entry: pip install --dry-run -e .
+        language: system
+        pass_filenames: false
+        files: ^pyproject\.toml$
