@@ -12,7 +12,6 @@ from converter.signavio_to_bpmn import convert_file
 from sanitize_filename import sanitize
 from tqdm import tqdm
 
-
 METADATA_SCHEMA = cfgv.Map(
     "ModelMetadata",
     "name",
